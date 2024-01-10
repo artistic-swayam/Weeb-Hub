@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qualification Quiz</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        header{
+            height: 50px;
+            width: 100%;
+            background-color: #1b1b32;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+        }
+        #logo{
+            width: 10%;
+            padding: 8px;
+        }
+        h1{
+            color: #f1be32;
+            text-align: center;
+            font-size: 30px;
+        }
+        header > ul{
+            width: 50%;
+            max-width: 300px;
+            display: flex;
+            justify-content: space-evenly;
+            
+            
+        }
+        header a{
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding:2px 4px;
+        }
+        header a:hover{
+            color: black;
+            background-color: white;
+        }
+        form{
+            margin: 50px auto;
+            padding-top: 50px;
+            max-width: 500px;
+            min-width: 450px;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+<img id="logo" src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg">
+<h1>HTML\CSS Quiz</h1>
+<ul>
+<li><a href="#">INFO</a></li>
+<li><a href="#">HTML</a></li>
+<li><a href="#">CSS</a></li>
+</header>
+    <main>
+<form action="#" method="post">
+    <div id="info">
+<h2>Student Info</h2>
+<hr>
+<label>Name:<input type="text" id="detail" name="Name"></label>
+<label>Email:<input type="email" id="detail" name="Email"></label>
+<label>D.O.B:<input type="date" id="detail" name="Date"></label>
+    </div>
+    <div id="question-block">
+        <h2>HTML</h2>
+        <p id="ques-head">Question#1</p>
+        <label for="tf">
+            The legend element represents a caption for the content of its
+            parent fieldset element
+            <input type="radio" value="true" name="TF" id="tf">True
+            <input type="radio" value="false" name="TF" id="tf">False
+        </label>
+        <p id="ques-head">Question#2</p>
+        <label for="TF">
+            A label element nesting an input element is required to have a
+            for attribute with the same value as the input's id
+            <input type="radio" value="true" name="TF" id="TF">True
+            <input type="radio" value="false" name="TF" id="TF">False
+        </label>
+        <h2>CSS</h2>
+        <label for="role">Are you a Frontend Developer?<select id="role" name="Role">
+            <option value="">Select an option</option>
+            <option value="YES">YES</option>
+            <option value="NO">NO</option>
+        </select></label>
+        <label for="css-textarea">Do you have any questions:<textarea id="css-textarea" name="questions" placeholder="Questions..."></textarea></label>
+        <button type="submit">SEND</button>
+    </div>
+    </form>
+</main>
+    <footer>
+    <div class="bottom-nav">
+        <i><a href="#">freecodecamp</a></i>
+        <i><p>San Fransisco</p></i>
+        <i><p>California</p></i>
+        <i><p>USA</p></i>
+    </div>
+    </footer>
+
+</body>
+</html>
