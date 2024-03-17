@@ -6,24 +6,196 @@
     <title>Document</title>
     <style>
         *{
-            padding: 0;
             margin: 0;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 0;
+            transition: .2s linear;
+            text-decoration: none;
+            font-family: system-ui;
+            font-weight: 500;
         }
         body{
-            background-color: black;
+            background-color: seagreen;
         }
-        p{
+        .title-bar{
+            height: 25px;
+            background-color: darkcyan;
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        }
+        .logo{
+            font-size: 32px;
+            font-weight: 700;
+            display: flex;
             color: white;
-            font-size: 150px;
-            
         }
-        
+        .dot{
+            display: inline-block;
+            color: orange;
+        }
+        .nav{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .link{
+            margin: auto 25px;
+            font-size: 20px;
+            color: white;
+        }
+        .link:hover{
+            border-bottom: 2px solid orange;
+            transition: none;
+        }
+        option,select{
+            border:none;
+            background-color: seagreen;
+            color: white;
+            font-size: 20px;
+        }
+        .quote{
+            color: white;
+            font-size: 50px;
+            font-weight: 700;
+            padding-bottom: 20px;
+        }
+        #main{
+            margin-top: 150px;
+            margin-left: 150px;
+        }
+        i{
+            font-size: 18px;
+            font-weight:300;
+            display: block;
+            color: white;
+        }
+        .bt1,.bt2{
+            height: 40px;
+            width: 150px;
+            color: white;
+            margin: 30px auto;
+            border-radius: 40px;
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        }
+        .bt1{
+            border: 1px solid white;
+            background-color: darkcyan;
+        }
+        .bt2{
+            border: none;
+            background-color: seagreen;
+        }
+        .bt1:hover{
+            border: none;
+            background-color: seagreen;
+        }
+        .bt2:hover{
+            border: 1px solid white;
+        }
+        #about{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            margin-top: 60px;
+        }
+        .box1,.box2,.box3,.box4{
+            height: 300px;
+            width: 300px;
+            color: white;
+            font-size: 30px;
+            background-color: darkcyan;
+            text-align: center;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        }
+        .box1:hover{
+            box-shadow: 10px 10px 0 black;
+            top: 5px;
+            left: -5px;
+        }
+        .box2:hover{
+            box-shadow: 10px 10px 0 black;
+            top: 5px;
+            left: -5px;
+        }
+        .box3:hover{
+            box-shadow: 10px 10px 0 black;
+            top: 5px;
+            left: -5px;
+        }
+        .box4:hover{
+            box-shadow: 10px 10px 0 black;
+            top: 5px;
+            left: -5px;
+        }
+        .about-links{
+            color: orange;
+        }
+        @media (max-width:1500px){
+            .box1,.box2,.box3,.box4{
+                height: 250px;
+                width: 200px;
+                font-size: 20px;
+                padding: 20px;
+            }
+        };
     </style>
 </head>
 <body>
-    <div class="content">
-        <p>Happening Now</p>
+    <section class="title-bar">
+    </section>
+    <section class="nav">
+        <a class="logo">TowerMech<p class="dot">.</p></a>
+        <div class="links">
+        <a href="#main" class="link">Home</a>
+        <a href="#about" class="link">About</a>
+        <a href="#" class="link">Services</a>
+        <a href="#" class="link">Portfolio</a>
+        <a href="#" class="link">Team</a>
+        <a href="#" class="link">Blog</a>
+        <a href="#" class="link">
+          <select>
+            <option>Help</option>
+            <option>message</option>
+            <option>email</option>
+            <option>call</option>
+          </select>  
+        </a>
+        <a href="#" class="link">Contact</a>
     </div>
+    </section>
+    <section id="main">
+        <p class="quote">Welcome to Tower Mech</p>
+            <i>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum, quibusdam </i><i>inventore commodi earum id asp
+            eriores? Ducimus </i>
+        <button class="bt1">Get Started</button>
+        <button class="bt2">Watch Video</button>
+    </section>
+    <section id="about">
+        <div class="box1">Innovative
+            <a href="#" class="about-links">></a>
+        </div>
+        <div class="box2">Consistent
+            <a href="#" class="about-links">></a>
+        </div>
+        <div class="box3">Hard Working
+            <a href="#" class="about-links">></a>
+        </div>
+        <div class="box4">Informative
+            <a href="#" class="about-links">></a>
+        </div>
+    </section>
+    <script>
+    alert("Welcome to Tower Mech");
+    box1 = document.querySelector(".box1");
+    box2 = document.querySelector(".box2");
+    box3 = document.querySelector(".box3");
+    box4 = document.querySelector(".box4");
+    
+    box1.addEventListener("click", ()=>{
+        console.log("box1 was clicked");
+        box1.innerText = box1.innerText +  "Our team is innovative and helpful";
+    });
+    </script>
 </body>
 </html>

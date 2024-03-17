@@ -29,10 +29,12 @@
             margin-left: auto;
             margin-right: auto;
             padding-top: 30px;
+            border: 2px solid black;
         }
         img{
             height: 200px;
             width: auto;
+            margin: auto;
         }
         hr{
             height: 3px;
@@ -41,21 +43,20 @@
         }
         .bio{
             background-color: white;
-            margin-top: 2px;
-            margin-right: 600px;
-            margin-left: 600px;
+            border: 2px solid black;
+            margin: auto 32%;
             height: 100%;
             padding: 25px;
             font-size: 20px;
         }
-        .b{
+        #b{
             color: white;
             text-align: center;
             margin-top: 80px;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             font-size: 35px; 
         }
-        .bt{
+        #bt,#bt2{
             color: white;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             text-align: center;
@@ -65,38 +66,83 @@
         .bottom{
             padding: 30px;
         }
-        .footer{
+        #footer{
             height: 50px;
             width: 100%;
             color: black;
             background-color: white;
             margin-top: 50px;
         }
-        .footer p{
+        #footer p{
             font-size: 20px;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             text-align: center;
             padding: 10px;       
         }
+        #mode-btn{
+            position:sticky;
+            top:20px;
+            margin-left: 90%;
+            margin-right: auto;
+            border: none;
+            padding: 10px;
+            
+        }
+        #mode-btn:hover{
+            background-color:lightgrey;
+        }
+        #current-mode-display{
+            height: 15px;
+            width: 100%;
+            text-align: center;
+            border: 1px solid black;
+            background-color: white;
+        }
+
+        @media (max-width:500px) {
+            .bio{
+                margin: auto 10%;
+                font-size: 15px;
+            }
+            img{
+                height: 150px;
+                width: auto;
+            }
+            #bt{
+                font-size: 30px;
+            }
+            #footer p{
+                font-size: 15px;
+            }
+        }
+        @media (max-width:1000px) {
+            .bio{
+                margin: auto 10%;
+            }
+            .content{
+                font-size: 30px;
+            }
+        }
     </style>
 </head>
 <body>
+    <button id="mode-btn">Change mode to:<p id="current-mode-display"></p></button>
     <div class="header">
-        <h1>Gojo Satoru</h1>
-        <h4><i>1995-2023</i></h4>
+        <h1 id="header-txt">Gojo Satoru</h1>
+        <h4><i id="header-txt2">1995-2023</i></h4>
     </div>
     <div class="content">
         <p>
            
             "I am the Strongest"
-            -No more strongest:),
+            -No more strongest:,
             Gojo is killed by Sukuna
         
         </p>
         <hr>
         <img src="gs.jpg" class="gojo_bw_image">
     </div>
-    <h2 class="b">Biography</h2>
+    <h2 id="b">Biography</h2>
     <div class="bio">
         
         <p>Satoru Gojo (Japanese: 五条 悟, Hepburn: Gojō Satoru) is a fictional character from Gege Akutami's manga Jujutsu Kaisen. He was first introduced in Akutami's short series Tokyo Metropolitan Curse Technical School as the mentor of the cursed teenager Yuta Okkotsu at Tokyo Prefectural Jujutsu High School. This miniseries became the prequel Jujutsu Kaisen 0 of Jujutsu Kaisen. In Jujutsu Kaisen, Gojo takes the same role but mentors the student Yuji Itadori who suffers a similar Curse, helping him become stronger while protecting other characters in the series.
@@ -113,14 +159,65 @@
             </div>
             
     <div class="bottom">
-        <h2 class="bt"><i>You will always be the Strongest</i></h2>
-        <h1 class="bt"><i>Gojo Forever!</i></h1>
+        <h2 id="bt"><i>You will always be the Strongest</i></h2>
+        <h1 id="bt2"><i>Gojo Forever!</i></h1>
     </div>
-    <div class="footer">
-        <p>Made with ❤ by WEEB HUB community
+    <div id="footer">
+        <p id="footer-text">Made with ❤ by WEEB HUB community
         ©2023</p>
     </div>
-    
-        
+
+    <script>
+        mode_btn = document.getElementById("mode-btn");
+        background = document.querySelector("body");
+        background_box = document.getElementById("current-mode-display");
+        header_txt = document.getElementById("header-txt");
+        header_txt2 = document.getElementById("header-txt2");
+        header_txt3 = document.getElementById("b");
+        header_txt4 = document.getElementById("bt");
+        header_txt5 = document.getElementById("bt2");
+        footer = document.getElementById("footer");
+        footer_txt = document.getElementById("footer-text");
+        current_mode = "black";        
+
+        function change_mode_white(){
+            background.style.backgroundColor = "white";
+            header_txt.style.color = "black";
+                header_txt2.style.color = "black";
+                header_txt3.style.color = "black";
+                header_txt4.style.color = "black";
+                header_txt5.style.color = "black";
+                footer.style.backgroundColor = "black";
+                footer_txt.style.color = "white";
+                background_box.style.backgroundColor = "black";
+        }
+
+        function change_mode_black(){
+            background.style.backgroundColor = "black";
+            header_txt.style.color = "white";
+                header_txt2.style.color = "white";
+                header_txt3.style.color = "white";
+                header_txt4.style.color = "white";
+                header_txt5.style.color = "white";
+                footer.style.backgroundColor = "white";
+                footer_txt.style.color = "black";
+                background_box.style.backgroundColor = "white";
+        }
+
+        mode_btn.addEventListener("click",()=> {
+            if(current_mode === "black"){
+                current_mode = "white";
+                change_mode_white();
+                console.log("user changed mode to", current_mode);
+                //
+            }
+            else{
+                current_mode = "black";
+                change_mode_black();
+                console.log("user changed mode to", current_mode);
+                //
+            }
+        })
+    </script>
 </body>
 </html>

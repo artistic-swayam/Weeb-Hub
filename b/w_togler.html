@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+    </style>
+</head>
+<body>
+    <button id="mode-btn">Change mode</button>
+    <script>
+        let mode_btn = document.querySelector("#mode-btn");
+        let current_mode = "white";
+        let background = document.querySelector("body");
+
+        mode_btn.addEventListener("click",()=> {
+            if(current_mode === "white"){
+                current_mode = "black";
+                background.style.backgroundColor = "black";
+                console.log("user changed mode to", current_mode);
+            }
+            else{
+                current_mode = "white";
+                background.style.backgroundColor = "white";
+                console.log("user changed mode to", current_mode);
+            }
+        })
+    </script>
+</body>
+</html>

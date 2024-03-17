@@ -18,7 +18,7 @@ const profile={
 console.log(profile);
 
 //Calculator
-let no1 = prompt("Enter first number:");
+//let no1 = prompt("Enter first number:");
 let no2 = prompt("Enter second number");
 let opt = prompt("Enter operator +,-,*,/:");
 if (opt="+"){
