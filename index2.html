@@ -6,12 +6,19 @@
     <title>CSS level 2</title>
     <link rel="stylesheet" href="style2.css"/>
 </head>
-<body>
-    <div>div1</div>
-    <br>
-    <div>div2</div>
-    <br>
-    <div>div3</div>
+<style>
     
+</style>
+<body>
+    
+    <script>
+        let n = 21;
+        let binary ="";
+        while(n > 0){
+            binary = (n%2) + binary;
+            n = Math.floor(n/2);
+        }
+        console.log(binary);
+    </script>
 </body>
 </html>

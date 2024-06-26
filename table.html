@@ -4,8 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Table</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: system-ui;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100%;
+            width: 100%;
+        }
+        #navbar{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        nav{
+            display: flex;
+            align-items: center;
+            gap: 1vw;
+        }
+        #navbar nav h4{
+            padding: 10px 20px;
+            border: 1px solid rgb(169, 164, 164);
+            border-radius: 50px;
+            font-size: 18px;
+            position: relative;
+            font-weight: 500;
+            overflow: hidden;
+        }
+        #navbar nav h4::after{
+            content: "";
+            position: absolute;
+            background-color: black;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            bottom: -100%;
+            border-radius: 50%;
+            transition:all ease 0.4s;
+        }
+        #navbar nav h4:hover::after{
+            left: 0;
+            bottom: 0;
+            border-radius: 0;
+        }
+        
+        #navbar nav h4 a{
+            color: black;
+            text-decoration: none;
+            position: relative;
+            z-index: 9;
+        }
+        #navbar nav h4:hover a{
+            color: white;
+        }
+    </style>
 </head>
 <body>
+    <div id="navbar">
+    <h1>BPS<b>.</b></h1>
+    <nav>
+        <h4><a href="#">Studio</a></h4>
+        <h4><a href="#">About</a></h4>
+        <h4><a href="#">Contact</a></h4>
+    </nav>
+    </div>
     <table>
         <caption>
             <h1>Student Data</h1>

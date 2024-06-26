@@ -1,0 +1,233 @@
+*{
+    font-family:system-ui;
+    padding:0;
+    margin:0;
+    color:white;
+    transition: .2s;
+  }
+  
+  #navbar{
+    height:70px;
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+  }
+  ul{
+    text-align:center;
+  }
+  li,#project-title,#button,#links{
+    display:inline-block;
+    font-size:20px;
+    padding:18px;
+  }
+  .profile-link,#project-title,#button,#links{
+    color:white;
+    text-decoration:none;
+    padding:20px;
+  }
+  .profile-link{
+    font-size:22px;
+    padding:23px;
+  }
+  .profile-link:hover{
+    background-color:white;
+    color: black;
+  }
+  .welcome-section,#contact,body{
+    z-index: 1;
+    background: linear-gradient(-45deg,red,green,blue,yellow);
+    background-size: 400% 400%;
+    width: 100%;
+    animation: animate 15s ease infinite;
+    height:100%;
+  }
+  #about1{
+    padding-top:400px;
+    padding-bottom: 400px;
+    text-align:center;
+  }
+  #about2{
+    padding-top:400px;
+    text-align:center;
+  }
+  #name,#name1,#links{
+    font-size:60px;
+    font-weight:700;
+    text-align:center;
+  }
+  #name1{
+    font-size:35px;
+    padding-top:30px;
+    padding-bottom:10px;
+  }
+  #bio{
+    font-size:30px;
+    color:rgba(210, 210, 210, 0.92);
+    margin:20px auto;
+  }
+  #projects{
+    height:100%;
+    width: 100%;
+  background: #000000;
+  --gap: 5em;
+  --line: 1px;
+  --color: rgba(255, 255, 255, 0.2);
+
+  background-image: linear-gradient(
+      -90deg,
+      transparent calc(var(--gap) - var(--line)),
+      var(--color) calc(var(--gap) - var(--line) + 1px),
+      var(--color) var(--gap)
+    ),
+    linear-gradient(
+      0deg,
+      transparent calc(var(--gap) - var(--line)),
+      var(--color) calc(var(--gap) - var(--line) + 1px),
+      var(--color) var(--gap)
+    );
+  background-size: var(--gap) var(--gap);
+  }
+  .project-tile{
+    width:800px;
+    padding:20px;
+    margin-left:60px;
+    display:inline-block;
+  }
+  #project-title{
+    background-color: white;
+    color: black;
+    text-align:center;
+    border-top: none;
+  }
+  #project-title:hover{
+    background-color: black;
+    color: white;
+  }
+
+  #links{
+    font-size:25px;
+    margin:40px 15px;
+  }
+  #links:hover{
+    text-decoration:underline;
+  }
+  #divider{
+    margin-top:200px;
+    height:15px;
+    background-color:black;
+    border:none;
+  }
+  @media(max-width:850px){
+    .project-tile{
+      width:300px;
+    }
+    #button{
+      margin:0;
+    }
+    #links{
+      margin:20px auto;
+    }
+  }
+  @keyframes animate{
+      0%{
+          background-position: 0 50%;
+      }
+      50%{
+          background-position: 100% 50%;
+      }
+      100%{
+          background-position: 0 50%;
+      }
+  }
+  .hidden1{
+    display: none;
+  }
+      .hidden2{
+          height: 100%;
+          background: transparent;
+          transform: blur(2px);
+          text-align: center;
+          margin: 15% auto;
+      }
+      #hidden-link{
+          margin: 150px auto;
+          font-size: 40px;   
+          width: 100vw;
+      }
+      #hidden-link a{
+          color: white;
+          text-decoration: none;
+          padding: 50px;
+      }
+      #hidden-link a:hover{
+        color: rgb(167, 166, 166);
+        background-color: black;
+      }
+      .welcome-section2{
+        display: none;
+      }
+      button {
+        display: flex;
+        align-items: center;
+        font-family: inherit;
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 17px;
+        padding: 0.8em 1.3em 0.8em 0.9em;
+        color: white;
+        background: #ad5389;
+        background: black;
+        border: none;
+        letter-spacing: 0.05em;
+        border-radius: 16px;
+        margin-top: 20px;
+      }
+      
+      button svg {
+        margin-right: 3px;
+        transform: rotate(30deg);
+        transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+      }
+      
+      button span {
+        transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+      }
+      
+      button:hover svg {
+        transform: translateX(5px) rotate(90deg);
+      }
+      
+      button:hover span {
+        transform: translateX(7px);
+      }
+      #bt_parent{
+        text-align: center;
+      }
+      #button {
+        margin: 20px auto;
+        padding: 10px 20px;
+        text-transform: uppercase;
+        border-radius: 8px;
+        font-size: 17px;
+        font-weight: 500;
+        color: #ffffff80;
+        text-shadow: none;
+        background: transparent;
+        cursor: pointer;
+        box-shadow: transparent;
+        border: 1px solid #ffffff80;
+        transition: 0.5s ease;
+        user-select: none;
+      }
+      
+      #button:hover,
+      :focus {
+        color: #ffffff;
+        background: #008cff;
+        border: 1px solid #008cff;
+        text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+        box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff,
+          0 0 100px #008cff;
+      }
+      

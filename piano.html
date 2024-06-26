@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="user-input">
+    <button id="convert-btn">Convert</button>
+    <p id="result"></p>
+    <script>
+        let user_input = document.getElementById("user-input");
+        let button = document.getElementById("convert-btn");
+        let result = document.getElementById("result");
+           
+           const convert=(input)=>{
+          
+            let inputs = Array.from(input);
+            let quotients = [];
+            let remainders = [];
+
+            while(input>0){
+                let quotient = Math.floor(input / 2);
+            let remainder = input % 2;
+            
+            quotients.push(quotient);
+            remainders.push(remainder);
+            }
+
+            console.log(inputs);
+            console.log(quotients);
+            console.log(remainders);
+
+           }
+
+           button.addEventListener("click",convert());
+        
+    </script>
+</body>
+</html>
